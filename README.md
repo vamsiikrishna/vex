@@ -7,7 +7,7 @@ Download the latest release from GitHub ['Releases']('/releases').
 ## Usage
 
 Usage:
-``  ./vex.phar  <url> [<n>] [<c>] [<m>] ``
+``  ./vex.phar vex <url> [<n>] [<c>] [<m>] ``
 
 Arguments:
 ```
@@ -18,4 +18,4 @@ Arguments:
 ```
 Example :
 
-./vex.phar http://127.0.0.1:8000 1000 10
+./vex.phar vex http://127.0.0.1:8000 1000 10
