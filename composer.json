@@ -1,0 +1,22 @@
+{
+  "name": "vamsiikrishna/vex",
+  "description": "small app that sends some load to a web application.",
+  "type": "project",
+  "require": {
+    "guzzlehttp/guzzle": "~6.0",
+    "symfony/console": "^3.3",
+    "symfony/stopwatch": "^3.3"
+  },
+  "autoload": {
+    "psr-4": {
+      "Vamsi\\": "src/Vamsi"
+    }
+  },
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Vamsi Krishna B",
+      "email": "vamsi@fastmail.com"
+    }
+  ]
+}
