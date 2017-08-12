@@ -2,7 +2,7 @@ vex is a small PHP app that sends some load to a web application
 
 ## Installation
 
-Download the latest release from GitHub [Releases]('https://github.com/vamsiikrishna/vex/releases').
+Download the latest release from GitHub [Releases](https://github.com/vamsiikrishna/vex/releases).
 
 ## Usage
 
