@@ -1,8 +1,14 @@
 vex is a small PHP app that sends some load to a web application
 
+![vex - PHP based HTTP load generator](https://i.imgur.com/Pat80U1.gif "vex - PHP HTTP Load Generator")
+
 ## Installation
 
 Download the latest release from GitHub [Releases](https://github.com/vamsiikrishna/vex/releases).
+
+
+
+
 
 ## Usage
 
