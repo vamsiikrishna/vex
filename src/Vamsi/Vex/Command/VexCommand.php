@@ -2,16 +2,16 @@
 
 namespace Vamsi\Vex\Command;
 
-use GuzzleHttp\Pool;
 use GuzzleHttp\Client;
+use GuzzleHttp\Pool;
 use GuzzleHttp\Psr7\Request;
-use Symfony\Component\Console\Helper\ProgressBar;
+use GuzzleHttp\TransferStats;
 use Symfony\Component\Console\Command\Command;
+use Symfony\Component\Console\Helper\ProgressBar;
+use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
-use GuzzleHttp\TransferStats;
-use Symfony\Component\Console\Input\InputArgument;
 
 class VexCommand extends Command
 {
@@ -31,7 +31,6 @@ class VexCommand extends Command
 
     protected function execute(InputInterface $input, OutputInterface $output)
     {
-
         $array = [];
         $url = $input->getArgument('url');
         $number_of_requests = $input->getArgument('n');
@@ -47,7 +46,7 @@ class VexCommand extends Command
                 $array[] = $time;
                 //echo $time.PHP_EOL;
                 //$stats->getHandlerStats();
-            }
+            },
         ]);
 
         $progress = new ProgressBar($output, $number_of_requests);
@@ -63,7 +62,7 @@ class VexCommand extends Command
 
         $pool = new Pool($client, $requests($number_of_requests), [
             'concurrency' => $concurrency,
-            'fulfilled' => function ($response, $index) use ($progress) {
+            'fulfilled'   => function ($response, $index) use ($progress) {
                 $progress->advance();
             },
             'rejected' => function ($reason, $index) {
@@ -76,6 +75,5 @@ class VexCommand extends Command
         $progress->finish();
         $output->writeln('');
         $output->writeln('Done!');
-
     }
 }
