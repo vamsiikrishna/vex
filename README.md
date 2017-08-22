@@ -6,29 +6,28 @@ vex is a small PHP app that sends some load to a web application
 
 Download the latest release from GitHub [Releases](https://github.com/vamsiikrishna/vex/releases).
 
-
-
-
+Or require globally using Composer with `composer global require vamsiikrishna/vex`. This will automatically add the `vex` binary to your path.
 
 ## Usage
 
-Usage:
-``  vex [options] [--] <url> [<n>] [<c>]
- ``
+Usage:  
+`vex [options] [--] <url> [<n>] [<c>]`
 
-Arguments:
+Arguments:  
 ```
   url                      The URL to which the requests should be sent
   n                        Number of requests to be made [default: 1]
   c                        Concurrency [default: 1]
 ```
-Options:
+
+Options:  
 ```
   -m, --method[=METHOD]    HTTP Method [default: "GET"]
   -H, --headers[=HEADERS]  Headers (multiple values allowed)
   -d, --body[=BODY]        Request body
 ```
-Example :
+
+Example:  
 
 - 1000 Get requests with 10 concurrency to `http://127.0.0.1:8000`
 

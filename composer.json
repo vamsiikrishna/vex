@@ -1,6 +1,6 @@
 {
   "name": "vamsiikrishna/vex",
-  "description": "small app that sends some load to a web application.",
+  "description": "A small app that sends some load to a web application.",
   "type": "project",
   "require": {
     "guzzlehttp/guzzle": "~6.0",
@@ -18,5 +18,8 @@
       "name": "Vamsi Krishna B",
       "email": "vamsi@fastmail.com"
     }
+  ],
+  "bin": [
+    "bin/vex"
   ]
 }
