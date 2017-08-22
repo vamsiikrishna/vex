@@ -6,6 +6,8 @@ vex is a small PHP app that sends some load to a web application
 
 Download the latest release from GitHub [Releases](https://github.com/vamsiikrishna/vex/releases).
 
+Or require globally using Composer with `composer global require vamsiikrishna/vex`. This will automatically add the `vex` binary to your path.
+
 ## Usage
 
 Usage:  
