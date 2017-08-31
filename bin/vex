@@ -9,7 +9,7 @@ if (file_exists(__DIR__ . '/../../../autoload.php')) {
 use Symfony\Component\Console\Application;
 use Vamsi\Vex\Command\VexCommand;
 
-$application = new Application('Vex', '0.1-dev');
+$application = new Application('Vex', '0.2-dev');
 $command = new VexCommand();
 $application->add($command);
 $application->run();
