@@ -29,7 +29,7 @@ class VexCommand extends Command
             ->addOption('body', 'd', InputOption::VALUE_OPTIONAL, 'Request body', null);
     }
 
-    protected function execute(InputInterface $input, OutputInterface $output)
+    protected function execute(InputInterface $input, OutputInterface $output): int
     {
         $array = [];
         $url = $input->getArgument('url');
@@ -75,5 +75,6 @@ class VexCommand extends Command
         $progress->finish();
         $output->writeln('');
         $output->writeln('Done!');
+        return 0;
     }
 }
